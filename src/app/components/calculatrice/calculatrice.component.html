@@ -1,0 +1,25 @@
+<div class="buttons">
+
+    <button class="btn-first-number" *ngIf="randomNumber1 === null" (click)="generateNumber()">Generate Number</button>
+    <button *ngIf="randomNumber1 !== null" class="btn-first-number" (click)="generateNumber()">
+      {{ randomNumber1 }}
+    </button>
+    
+    <button class="btn-second-number" *ngIf="randomNumber2 === null" (click)="generateNumber()">Generate Number</button>
+    <button *ngIf="randomNumber2 !== null" class="btn-first-number" (click)="generateNumber()">
+      {{ randomNumber2 }}
+    </button>
+
+<div class="operators">
+    <button (click)="calculateSum()" class="buttons-operators"> + </button>
+    <button (click)="calculateSoustraction()" class="buttons-operators"> - </button>
+    <button (click)="calculateDivision()" class="buttons-operators"> / </button>
+    <button (click)="calculateMultiplication()" class="buttons-operators"> x </button> 
+</div>
+
+<div *ngIf="result !== null" class="result">
+<p> Le résultat : {{result}}</p>
+</div>
+
+
+</div>
